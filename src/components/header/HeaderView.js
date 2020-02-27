@@ -8,8 +8,12 @@ export const HeaderView = () => {
     return (<nav>
         <AppBar position='static' data-testid='header'>
             <Toolbar>
-                <Button color="inherit" className={'header-title'}>Receitas</Button>
-                <Button color="inherit">Sobre</Button>
+                <Button color="inherit">
+                    <a href={'/'} className={'header-title'}>Receitas</a>
+                </Button>
+                <Button color="inherit">
+                    <a href={'/sobre'} className={'header-title'}>Sobre</a>
+                </Button>
             </Toolbar>
         </AppBar>
     </nav>)

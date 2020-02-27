@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 
 export const HeaderView = () => {
     return (<nav>
-        <AppBar position="static">
+        <AppBar position='static' data-testid='header'>
             <Toolbar>
                 <Button color="inherit" className={'header-title'}>Receitas</Button>
                 <Button color="inherit">Sobre</Button>

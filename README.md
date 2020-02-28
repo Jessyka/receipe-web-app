@@ -1,4 +1,4 @@
-# Receipe Web App
+# Recipe Web App
 React web app de consulta de receitas. Desenvolvido aplicando conceitos estudados no curso React and Hooks.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

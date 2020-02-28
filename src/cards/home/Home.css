@@ -4,15 +4,3 @@
     width: 100%;
     text-align: center;
 }
-
-.recipe-item {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.alert-messages{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}

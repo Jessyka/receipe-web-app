@@ -1,9 +1,9 @@
-import {useState, useEffect} from "react";
-import {API_URL} from "../../../config";
+import {useState, useEffect} from 'react';
+import {API_URL} from '../../../config';
 
 export const useRecipes = searchData => {
-    const [ recipes, setRecipes ] = useState([])
-    const [ message, setError ] = useState('')
+    const [ recipes, setRecipes ] = useState([]);
+    const [ message, setError ] = useState('');
 
     const addError = newMessage => {
         setError(newMessage);

@@ -1,6 +1,6 @@
-import {render} from "@testing-library/react";
-import React from "react";
-import Recipes from "../Recipes";
+import {render} from '@testing-library/react';
+import React from 'react';
+import Recipes from '../Recipes';
 
 test('renders recipes list', () => {
     const { getByTestId } = render(<Recipes searchTerm={''} />);

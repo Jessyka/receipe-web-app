@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import {HeaderView} from '../../components/header/HeaderView'
-import {SearchFilter} from "../../components/searchFilter/SearchFilter";
-import './Home.css'
-import Recipes from "./recipes/Recipes";
+import {HeaderView} from '../../components/header/HeaderView';
+import {SearchFilter} from '../../components/searchFilter/SearchFilter';
+import Recipes from './recipes/Recipes';
+import './Home.css';
 
 
 function Home() {
-    const [ searchTerm, setSearchTerm ] = useState([])
+    const [ searchTerm, setSearchTerm ] = useState([]);
 
     return (
         <div>

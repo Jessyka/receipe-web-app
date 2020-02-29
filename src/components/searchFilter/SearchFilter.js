@@ -1,8 +1,8 @@
-import Grid from "@material-ui/core/Grid";
-import React, {useState} from "react";
-import './SearchFilter.css'
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+import React, {useState} from 'react';
+import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import './SearchFilter.css';
 
 export const SearchFilter = ({onSearchSubmit}) => {
     const [searchData, setSearchData] = useState('');
@@ -33,8 +33,8 @@ export const SearchFilter = ({onSearchSubmit}) => {
                     </Grid>
                     <Grid item>
                         <Button
-                            variant="contained"
-                            color="primary"
+                            variant='contained'
+                            color='primary'
                             onClick={submitSearchQuery}>
 
                             Buscar
@@ -43,5 +43,5 @@ export const SearchFilter = ({onSearchSubmit}) => {
                 </Grid>
             </form>
         </>
-    )
+    );
 }

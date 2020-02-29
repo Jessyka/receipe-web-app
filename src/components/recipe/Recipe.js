@@ -1,5 +1,5 @@
 import React from'react';
-import './Recipe.css'
+import './Recipe.css';
 
 export const Recipe = ({data}) => {
     const {label, image, calories, ingredients} = data
@@ -19,5 +19,5 @@ export const Recipe = ({data}) => {
                 ))}
             </ul>
         </div>
-    )
+    );
 }

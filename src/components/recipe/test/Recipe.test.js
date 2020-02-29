@@ -1,6 +1,6 @@
-import {render} from "@testing-library/react";
-import React from "react";
-import { Recipe } from "../Recipe";
+import {render} from '@testing-library/react';
+import React from 'react';
+import { Recipe } from '../Recipe';
 
 const recipeData = {
     label: 'my-label',

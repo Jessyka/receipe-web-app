@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import {render} from '@testing-library/react';
 import {SearchFilter} from '../SearchFilter';
 
 test('renders Receitas link', () => {

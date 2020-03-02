@@ -1,26 +1,48 @@
 import {useState, useEffect} from 'react';
 import {API_URL} from '../../../config';
+import AlertSeverity from "../../../components/alertMessage/AlertSeverity";
 
 export const useRecipes = searchData => {
-    const [ recipes, setRecipes ] = useState([]);
-    const [ message, setError ] = useState('');
+    const messageDefault = {
+        message: '',
+        showMessage: false,
+        severity: AlertSeverity.error
+    };
 
-    const addError = newMessage => {
-        setError(newMessage);
+    const [ recipes, setRecipes ] = useState([]);
+    const [ alertMessage, setAlertMessage ] = useState(messageDefault);
+
+    const addAlert = (message, severity = AlertSeverity.error) =>
+    {
+        setAlertMessage({
+            message,
+            showMessage: true,
+            severity
+        });
         setRecipes([]);
     }
 
     const addRecipes = data => {
-        setRecipes(data);
-        setError('');
+        if(data.length){
+            setRecipes(data);
+            setAlertMessage(messageDefault);
+            return;
+        }
+
+        addAlert('Nenhum item encontrado.', AlertSeverity.info);
+
+    }
+
+    const fetchAPIData = (searchData, callBackError) => {
+        fetch(API_URL(searchData))
+            .then(response =>  response.json().then(data => addRecipes(data.hits)))
+            .catch(() => callBackError('Error ao carregar receitas.'));
     }
 
     useEffect( () => {
-        if (searchData.length > 0) {
-            fetch(API_URL(searchData))
-                .then(response => response.json().then(data => addRecipes(data.hits)))
-                .catch(() => addError('Error ao carregar receitas.'));
+        if (searchData.length) {
+            fetchAPIData(searchData, addAlert);
         }}, [searchData]);
 
-    return { recipes, message };
+    return { recipes, alertMessage };
 }

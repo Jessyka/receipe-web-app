@@ -22,15 +22,18 @@ export const useRecipes = searchData => {
         setRecipes([]);
     }
 
+    const setRecipesAndCleanMessage = data => {
+        setRecipes(data);
+        setAlertMessage(messageDefault);
+    }
+
     const addRecipes = data => {
         if(data.length){
-            setRecipes(data);
-            setAlertMessage(messageDefault);
+            setRecipesAndCleanMessage(data);
             return;
         }
 
         addAlert('Nenhum item encontrado.', AlertSeverity.info);
-
     }
 
     const fetchAPIData = (searchData, callBackError) => {

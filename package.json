@@ -52,6 +52,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jessyka/recipe-web-app.git"
+    "url": "git@github.com:Jessyka/recipe-web-app.git"
   }
 }

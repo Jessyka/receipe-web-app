@@ -47,5 +47,5 @@ export const useRecipes = searchData => {
             fetchAPIData(searchData, addAlert);
         }}, [searchData]);
 
-    return { recipes, alertMessage };
+    return { recipes, alertMessage, fetchAPIData };
 }
